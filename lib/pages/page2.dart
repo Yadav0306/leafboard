@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:leaf/components/app_bar.dart';
-import 'package:leaf/pages/page2.dart';
-
 import 'home_page.dart';
 
-class Page1 extends StatefulWidget {
-  const Page1({super.key});
+class Page2 extends StatefulWidget {
+  const Page2({super.key});
 
   @override
-  State<Page1> createState() => _Page1State();
+  State<Page2> createState() => _Page2State();
 }
 
-class _Page1State extends State<Page1> {
+class _Page2State extends State<Page2> {
   String _selectedOption = '';
   bool _canProceed = false;
 
@@ -28,7 +26,7 @@ class _Page1State extends State<Page1> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return const Page2();
+            return const HomePage();
           },
         ),
       );
@@ -60,16 +58,7 @@ class _Page1State extends State<Page1> {
               ),
               const SizedBox(height: 30),
               const Text(
-                'Let\'s create your profile',
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Color.fromARGB(255, 17, 27, 49),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                'What will you use it for?',
+                'What is your role?',
                 style: TextStyle(
                   fontSize: 16,
                   color: Color.fromARGB(255, 17, 27, 49),
@@ -77,11 +66,13 @@ class _Page1State extends State<Page1> {
                 ),
               ),
               const SizedBox(height: 20.0),
-              _buildOption('Work'),
+              _buildOption('Marketing'),
               const SizedBox(height: 16.0),
-              _buildOption('Personal'),
+              _buildOption('Developer'),
               const SizedBox(height: 16.0),
-              _buildOption('School'),
+              _buildOption('Designer'),
+              const SizedBox(height: 16.0),
+              _buildOption('Management'),
               const SizedBox(height: 32.0),
               nextButton(),
               const SizedBox(height: 150.0),

@@ -277,19 +277,61 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 25),
 
-                Container(
-                  height: 52,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    color: Colors.white,
+                InkWell(
+                  child: Container(
+                    height: 52,
+                    decoration: BoxDecoration(
+                      border:
+                          Border.all(color: Colors.grey.shade300, width: 1.5),
+                      borderRadius: BorderRadius.circular(32),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.network(
+                          'http://pngimg.com/uploads/google/google_PNG19635.png',
+                          height: 25,
+                          width: 25,
+                        ),
+                        const SizedBox(width: 4),
+                        const Text(
+                          'Sign up with Google',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 12.5),
-                Container(
-                  height: 52,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    color: Colors.white,
+                InkWell(
+                  child: Container(
+                    height: 52,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.grey.shade300,
+                        width: 1.5,
+                      ),
+                      borderRadius: BorderRadius.circular(32),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.apple, color: Colors.black),
+                        SizedBox(width: 4),
+                        Text(
+                          'Sign up with Apple',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
