@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Poppins',
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.black),
           backgroundColor: Colors.transparent,
