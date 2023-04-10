@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:leaf/components/logo.dart';
 import 'package:leaf/pages/page1.dart';
 
 class LoginPage extends StatefulWidget {
@@ -40,12 +41,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: Brightness.dark,
-        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -55,25 +51,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'lib/images/logo.png',
-                      height: 35,
-                      width: 35,
-                    ),
-                    const SizedBox(width: 10),
-                    const Text(
-                      'Leafboard',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 17, 27, 49),
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
+                const Logo(),
                 const SizedBox(height: 25),
                 const Align(
                   alignment: Alignment.center,

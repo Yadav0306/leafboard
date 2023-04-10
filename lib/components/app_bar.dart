@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   final VoidCallback onBackTap;
@@ -11,13 +10,6 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      iconTheme: const IconThemeData(color: Colors.black),
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      systemOverlayStyle: const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-      ),
       leading: TextButton(
         onPressed: onBackTap,
         child: const Text(
