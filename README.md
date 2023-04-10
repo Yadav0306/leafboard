@@ -16,5 +16,6 @@ I'm a flutter developer
 
 ## Screenshots
 
-![App Screenshot](https://user-images.githubusercontent.com/91073349/230872225-3264c653-0957-4858-9392-a0f407f4bc3c.mp4)
+![App Screenshot](https://user-images.githubusercontent.com/91073349/230873396-a50f99af-64c3-4639-b674-1c340ebe4784.gif
+)
 
