@@ -8,28 +8,20 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      leading: TextButton(
-        onPressed: onBackTap,
-        child: const Text(
-          '<Back',
-          style: TextStyle(
-            color: Colors.black,
+    return SafeArea(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          MaterialButton(
+            onPressed: onBackTap,
+            child: const Text('< Back'),
           ),
-        ),
+          MaterialButton(
+            onPressed: onSkipTap,
+            child: const Text('Skip >'),
+          ),
+        ],
       ),
-      actions: [
-        TextButton(
-          onPressed: onSkipTap,
-          child: const Text(
-            'Skip>',
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
-        ),
-      ],
     );
   }
 

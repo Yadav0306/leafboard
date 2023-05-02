@@ -11,21 +11,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'Poppins',
-        appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: Colors.black),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.transparent,
-            statusBarIconBrightness: Brightness.dark,
+    return AnnotatedRegion(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          fontFamily: 'Poppins',
+          appBarTheme: const AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.black),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Colors.transparent,
+              statusBarIconBrightness: Brightness.dark,
+            ),
           ),
         ),
+        home: const IntroPage(),
       ),
-      home: const IntroPage(),
     );
   }
 }
